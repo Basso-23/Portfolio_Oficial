@@ -1,0 +1,36 @@
+const projects_en = [
+  {
+    id: 1,
+    card_bg: "card_bg1",
+    project_bg: "project_bg1",
+    separator: "----------------------",
+    title: "Legal Eagles",
+    date: "24. March 2023",
+    category: "Business",
+    info: "Vercetti is a sans serif font inspired by a humanistic design with a geometric touch. Its character structure is solid and moderately conventional, integrating smoothly into miscellaneous projects such as editorial design, branding, or advertising.",
+    url: "https://www.carlosbaso.com/",
+  },
+  {
+    id: 2,
+    card_bg: "card_bg2",
+    project_bg: "project_bg2",
+    separator: "----------------------",
+    title: "Legal Eagles",
+    date: "24. March 2023",
+    category: "Business",
+    info: "Vercetti is a sans serif font inspired by a humanistic design with a geometric touch. Its character structure is solid and moderately conventional, integrating smoothly into miscellaneous projects such as editorial design, branding, or advertising.",
+    url: "https://www.carlosbaso.com/",
+  },
+  {
+    id: 3,
+    card_bg: "card_bg3",
+    project_bg: "project_bg3",
+    separator: "----------------------",
+    title: "Legal Eagles",
+    date: "24. March 2023",
+    category: "Business",
+    info: "Vercetti is a sans serif font inspired by a humanistic design with a geometric touch. Its character structure is solid and moderately conventional, integrating smoothly into miscellaneous projects such as editorial design, branding, or advertising.",
+    url: "https://www.carlosbaso.com/",
+  },
+];
+export { projects_en };
