@@ -213,6 +213,19 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.mancha {
+  background-image: url("https://odoocdn.com/openerp_website/static/src/img/highlights/yellow_highlight_bold_05.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.esquina {
+  background-image: url("https://odoocdn.com/openerp_website/static/src/img/graphics/fireworks_02.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .flip {
   -webkit-transform: scaleX(-1);
@@ -223,6 +236,13 @@
   background-image: url("https://odoocdn.com/openerp_website/static/src/img/graphics/fireworks_01.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fondo {
+  background-image: url("https://www.odoo.com/es/web_editor/shape/illustration%2Fdoodle%2F02.svg?c5=%23F2BB62");
+  background-size: contain;
+  background-repeat: repeat;
   background-position: center;
 }
 

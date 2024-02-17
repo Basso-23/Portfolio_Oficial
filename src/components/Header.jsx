@@ -13,7 +13,7 @@ const Header = ({ language, isOpen }) => {
       }
     >
       {/* TITLE----------------------------------------------- */}
-      <h1 className=" gap-x-12 tracking-wide animate-fade-up sm:text-[16vw] text-[22.5vw] text-center abril leading-none pt-20 flex flex-wrap gap-[6px] justify-center xl:px-0 sm:px-5 px-3">
+      <h1 className=" gap-x-12 tracking-wide animate-fade-up sm:text-[15vw] xl:text-[14.3vw] text-[22.5vw] text-center abril leading-none pt-20 flex flex-wrap gap-[6px] justify-center xl:px-0 sm:px-5 px-3">
         {language ? (
           <>
             <div className="relative flex">
@@ -24,20 +24,30 @@ const Header = ({ language, isOpen }) => {
               </strong>
               seños{" "}
             </div>
-            <div className="relative">Web</div>
+            <div className="relative">
+              Web
+              <div className="sm:flex hidden mancha absolute w-full h-[130px] 2xl:h-[6.3vw] 2xl:-bottom-[4vw] -bottom-20 right-0"></div>
+            </div>
           </>
         ) : (
           <>
             <div>Web</div>
-            <div>Designs</div>
+            <div className="relative flex">
+              Des{" "}
+              <strong className="relative font-normal">
+                i{" "}
+                <div className="xl:flex hidden corazones absolute w-[10vw] h-[10vw] min-h-[150px] min-w-[150px] -top-14 -left-16 2xl:-top-[3vw] 2xl:-left-[3.5vw]"></div>
+              </strong>
+              gns{" "}
+            </div>
           </>
         )}
       </h1>
       {/* CONTAINER ----------------------------------------------- */}
-      <div className=" xl:px-20 sm:px-5 px-3 w-full  lg:mt-40 mt-16 mb-0">
+      <div className=" xl:px-20 sm:px-5 px-3 w-full  lg:mt-20 xl:mt-40 mt-16 mb-0">
         {/* SUBTITLE ----------------------------------------------- */}
         <div className="animate-fade-up animate-delay-200 dmserif relative flex lg:justify-start justify-center">
-          <div className=" relative pb-4 text-[min(9vw,50px)] 2xl:text-[2.93vw] ">
+          <div className=" relative pb-4 text-[min(9vw,45px)] 2xl:text-[2.93vw] sm:pt-10 xl:pt-0 ">
             {language ? (
               <div className="flex relative">
                 <div className="w-[min(6vw,35px)] h-[min(6vw,35px)] 2xl:w-[2vw] 2xl:h-[2vw] comillas absolute left-0 -top-0"></div>

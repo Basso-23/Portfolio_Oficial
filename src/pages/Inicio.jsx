@@ -77,21 +77,21 @@ const Inicio = () => {
             >
               {filtered.map((item, index) => (
                 <div key={item.id}>
-                  <div className="sm:mt-8 mt-10 2xl:flex 2xl:flex-row flex flex-col-reverse xl:px-20 sm:px-5 px-3 gap-24 relative w-full">
+                  <div className="sm:mt-8 mt-10 1xl:flex 1xl:flex-row flex flex-col-reverse xl:px-20 sm:px-5 px-3 gap-24 relative w-full">
                     <div className="animate-fade-right animate-delay-200 2xl:w-[50%] xl:mt-0 -mt-20 w-full flex flex-col  text-lg 2xl:text-[0.85vw] xl:text-start text-center">
-                      <div className="border-[#3b3a38] border-b-[1px] flex flex-col py-6">
+                      <div className="border-[#3b3a38] border-b-[1px] flex flex-col py-4">
                         <h1 className="  font-bold">
                           {language ? <>Proyecto</> : <>Project</>}
                         </h1>
                         <p className="text-[#99958D]">{item.title}</p>
                       </div>
-                      <div className="border-[#3b3a38] border-b-[1px] flex flex-col py-6">
+                      <div className="border-[#3b3a38] border-b-[1px] flex flex-col py-5">
                         <h1 className="  font-bold">
                           {language ? <>Categoría</> : <>Category</>}
                         </h1>
                         <p className="text-[#99958D]">{item.category}</p>
                       </div>
-                      <div className="border-[#3b3a38] border-b-[1px] flex flex-col py-6">
+                      <div className="border-[#3b3a38] border-b-[1px] flex flex-col py-5">
                         <h1 className="  font-bold">
                           {language ? (
                             <>Fecha de creación</>
@@ -101,7 +101,7 @@ const Inicio = () => {
                         </h1>
                         <p className="text-[#99958D]">{item.date}</p>
                       </div>
-                      <div className="border-[#3b3a38] border-b-[1px] flex flex-col py-6">
+                      <div className="border-[#3b3a38] border-b-[1px] flex flex-col py-5">
                         <h1 className="  font-bold">Info</h1>
                         <p className="text-[#99958D] ">{item.info}</p>
                       </div>
@@ -166,8 +166,10 @@ const Inicio = () => {
 
                     <div className="2xl:w-[50%] w-full relative">
                       <div
-                        className={`w-full border-[#3b3a38] border-[1px] animate-fade-down animate-delay-500 ${item.project_bg} md:min-h-[625px] min-h-[350px]`}
-                      ></div>
+                        className={`relative w-full border-[#3b3a38] border-[1px] animate-fade-down animate-delay-500 ${item.project_bg} md:min-h-[575px] min-h-[350px]`}
+                      >
+                        <div className="1xl:flex hidden absolute w-[4.2vw] h-[4.2vw] min-h-[70px]  min-w-[70px] esquina -top-[2.5vw] -left-[3.2vw] z-50 flip"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -184,7 +186,7 @@ const Inicio = () => {
             className="mt-20 text-[#99958D] text-xl 2xl:text-[1vw] mb-10 md:text-start text-center"
           >
             {language ? (
-              <div>Últimos proyectos</div>
+              <div className="relative">Últimos proyectos </div>
             ) : (
               <div>Latest projects</div>
             )}
@@ -197,8 +199,8 @@ const Inicio = () => {
                 <Tilt
                   scale={1.04}
                   transitionSpeed={2500}
-                  tiltMaxAngleX={1}
-                  tiltMaxAngleY={1}
+                  tiltMaxAngleX={1.1}
+                  tiltMaxAngleY={1.1}
                   className=" cursor-pointer"
                   key={item.id}
                 >
