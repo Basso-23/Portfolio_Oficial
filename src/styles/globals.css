@@ -200,6 +200,32 @@
   background-position: center;
 }
 
+.comillas {
+  background-image: url("https://odoocdn.com/openerp_website/static/src/img/snippets/s_wd_testimonials/quote.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.raya {
+  background-image: url("https://odoocdn.com/openerp_website/static/src/img/highlights/yellow_highlight_03.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flip {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.corazones {
+  background-image: url("https://odoocdn.com/openerp_website/static/src/img/graphics/fireworks_01.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .loader,
 .loader:after {
   border-radius: 50%;

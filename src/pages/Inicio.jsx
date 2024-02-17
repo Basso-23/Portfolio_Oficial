@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const Inicio = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [language, setLanguage] = useState(true);
   const [projects, setProjects] = useState(projects_en);
   const [filtered, setFiltered] = useState(projects);
@@ -27,6 +27,13 @@ const Inicio = () => {
   }, [language]);
 
   const indexLast = projects_en.length;
+
+  useEffect(() => {
+    var filtered = projects.filter(function (atribute) {
+      return atribute.id == indexLast;
+    });
+    setFiltered(filtered);
+  }, []);
 
   const filterProject = (item) => {
     var filtered = projects.filter(function (atribute) {
@@ -45,6 +52,10 @@ const Inicio = () => {
             <>Carlos Baso | Portfolio</>
           )}
         </title>
+        <meta
+          name="description"
+          content="  Portafolio | Carlos Baso Ing. de Software, JavaScript, React JS, Next JS. ¡Echa un vistazo a mis proyectos!"
+        />
       </Head>
 
       <main className=" pb-32">
@@ -67,7 +78,7 @@ const Inicio = () => {
               {filtered.map((item, index) => (
                 <div key={item.id}>
                   <div className="sm:mt-8 mt-10 2xl:flex 2xl:flex-row flex flex-col-reverse xl:px-20 sm:px-5 px-3 gap-24 relative w-full">
-                    <div className="animate-fade-right animate-delay-200 2xl:w-[50%] xl:mt-0 -mt-20 w-full flex flex-col  text-lg xl:text-start text-center">
+                    <div className="animate-fade-right animate-delay-200 2xl:w-[50%] xl:mt-0 -mt-20 w-full flex flex-col  text-lg 2xl:text-[0.85vw] xl:text-start text-center">
                       <div className="border-[#3b3a38] border-b-[1px] flex flex-col py-6">
                         <h1 className="  font-bold">
                           {language ? <>Proyecto</> : <>Project</>}
@@ -100,7 +111,7 @@ const Inicio = () => {
                           target="_blank"
                           className="text-[18px] font-medium flex gap-1 text-black bg-[#FFF7E9] border-[#FFF7E9] px-20 py-3 xl:mx-0 mx-auto mt-1 hover:bg-transparent border-[1.5px] hover:text-[#FFF7E9] transition-all sm:cursor-pointer active:scale-[0.95]"
                         >
-                          <div className=" my-auto">
+                          <div className=" my-auto 2xl:text-[0.85vw]">
                             {language ? <>Ver página</> : <>Live demo</>}
                           </div>
                           <div className=" my-auto">
@@ -113,12 +124,11 @@ const Inicio = () => {
                           <Link
                             to="project"
                             smooth={true}
-                            offset={0}
                             duration={700}
                             onClick={() => {
                               filterProject(item.id + 1);
                             }}
-                            className="flex items-center gap-2 border-b cursor-pointer"
+                            className="flex items-center gap-2 border-b cursor-pointer 2xl:text-[0.85vw]"
                           >
                             <div className=" rotate-90">
                               <HiArrowDown />
@@ -137,12 +147,11 @@ const Inicio = () => {
                           <Link
                             to="project"
                             smooth={true}
-                            offset={0}
                             duration={700}
                             onClick={() => {
                               filterProject(item.id - 1);
                             }}
-                            className="flex items-center gap-2 border-b cursor-pointer"
+                            className="flex items-center gap-2 border-b cursor-pointer 2xl:text-[0.85vw]"
                           >
                             {language ? <div>Siguiente</div> : <div>Next</div>}
                             <div className=" -rotate-90">
@@ -166,12 +175,13 @@ const Inicio = () => {
             </m.div>
           ) : null}
         </AnimatePresence>
+
         {/* CONTENT----------------------------------------------- */}
         <div className="xl:px-20 sm:px-5 px-3 ">
           {/* TITLE----------------------------------------------- */}
           <section
             name="work"
-            className="mt-20 text-[#99958D] text-xl mb-10 md:text-start text-center"
+            className="mt-20 text-[#99958D] text-xl 2xl:text-[1vw] mb-10 md:text-start text-center"
           >
             {language ? (
               <div>Últimos proyectos</div>

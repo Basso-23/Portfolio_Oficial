@@ -23,41 +23,46 @@ const Footer = ({ language, setLanguage, setIsOpen }) => {
           transition={{
             duration: 0.35,
           }}
-          className="font-medium flex md:justify-end justify-center w-full fixed bottom-0 gap-10 glass px-10 py-4 border-[#3b3a38] border-t-[1px] text-sm z-50 tracking-wide"
+          className="text-[#858585] items-center flex md:justify-end justify-center w-full fixed bottom-0 gap-12 sm:gap-8 glass px-10 py-4 border-[#3b3a38] border-t-[1px] text-sm 2xl:text-[0.7vw] z-50 tracking-wide"
         >
-          <div className=" transition-all cursor-pointer hover:underline hover:underline-offset-2 hover:text-white">
-            {language ? <div>Contacto</div> : <div>Contact</div>}
-          </div>
           <div
             onClick={() => {
               setLanguage(true);
-              setIsOpen(false);
+
               window.scrollTo(0, 0);
             }}
             className={
               language
-                ? " underline underline-offset-2 transition-all pointer-events-none"
-                : "text-[#7e7e7e] transition-all cursor-pointer hover:underline hover:underline-offset-2 hover:text-white "
+                ? "text-white transition-all pointer-events-none"
+                : "transition-all cursor-pointer"
             }
           >
             Español
           </div>
+
           <div
             onClick={() => {
               setLanguage(false);
-              setIsOpen(false);
+
               window.scrollTo(0, 0);
             }}
             className={
               language
-                ? "text-[#7e7e7e] transition-all cursor-pointer hover:underline hover:underline-offset-2 hover:text-white"
-                : " underline underline-offset-2 transition-all pointer-events-none"
+                ? "  transition-all cursor-pointer"
+                : "  text-white transition-all pointer-events-none "
             }
           >
             English
           </div>
+          <a
+            href={"https://beacons.ai/carlosbaso"}
+            target="_blank"
+            className=" transition-all cursor-pointer "
+          >
+            {language ? <div>Contacto</div> : <div>Contact</div>}
+          </a>
 
-          <div className=" absolute left-10 fixedCenterY md:flex hidden font-normal">
+          <div className=" absolute left-10 fixedCenterY md:flex hidden font-normal 2xl:text-[0.7vw]">
             {language ? (
               <div>©2024 CarlosBaso. Todos los derechos reservados.</div>
             ) : (
