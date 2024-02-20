@@ -5,6 +5,10 @@ import Check from "@/assets/Check";
 const Navbar = ({ language, setLanguage, notify, refresh, resume }) => {
   return (
     <>
+      {/* Logo */}
+      <div className=" pointer-events-none roboto-bold sm:text-[38px] text-[34px] border-[4px]  border-black sm:w-[63px] sm:h-[60px] w-[59px] h-[56px] roboto-500 flex items-center text-center justify-center">
+        P
+      </div>
       {/* Navbar----------------------------------------------- */}
       <div className=" lg:flex hidden gap-14 roboto-500 text-[15px] tracking-wide uppercase">
         {/* correo----------------------------------------------- */}

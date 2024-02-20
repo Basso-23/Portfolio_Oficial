@@ -1,9 +1,9 @@
-import Inicio from "./Inicio";
+import Portafolio from "./Portafolio";
 
 export default function App() {
   return (
     <>
-      <Inicio />
+      <Portafolio />
     </>
   );
 }

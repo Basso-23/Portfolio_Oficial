@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { motion as m, AnimatePresence } from "framer-motion";
-import { projects_en } from "@/components/projects_en";
-import { projects_es } from "@/components/projects_es";
+import { projects_en } from "@/json/projects_en";
+import { projects_es } from "@/json/projects_es";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -122,10 +122,6 @@ const Inicio = () => {
       <main className="min-h-screen  max-w-[1500px] px-3 sm:px-8 mx-auto pt-10 sm:pt-[65px]">
         {/* Navbar container--------------------------------------------------------------------------------------------------------------------------------------------- */}
         <section className=" flex justify-between items-center relative ">
-          {/* Logo */}
-          <div className="roboto-bold sm:text-[38px] text-[34px] border-[4px]  border-black sm:w-[63px] sm:h-[60px] w-[59px] h-[56px] roboto-500 flex items-center text-center justify-center">
-            P
-          </div>
           <Navbar
             language={language}
             setLanguage={setLanguage}
@@ -165,8 +161,8 @@ const Inicio = () => {
               </div>
             ) : (
               <div className="sm:max-w-[900px]">
-                Welcome to my project portfolio! Here you'll find a sample of my
-                work.
+                Welcome to my project portfolio! Here you&apos;ll find a sample
+                of my work.
               </div>
             )}
           </div>
@@ -174,7 +170,7 @@ const Inicio = () => {
 
         {/* Tipos de trabajos--------------------------------------------------------------------------------------------------------------------------------------------- */}
         <section>
-          <div className=" hidden sm:flex mt-10 sm:mt-[66px] sm:gap-5 gap-4 text-[17px] sm:text-[19px] sm:justify-start justify-center">
+          <div className=" hidden sm:flex mt-10 sm:mt-[66px] sm:gap-5 gap-4 text-[17px] sm:text-[19px] sm:justify-start justify-center text-[#3b3b3b]">
             {language ? <div>Proyectos</div> : <div> Projects</div>}
             <div>/</div>
             {language ? <div>Diseños</div> : <div> Designs</div>}
