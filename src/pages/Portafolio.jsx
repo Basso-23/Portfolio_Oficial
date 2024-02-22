@@ -171,13 +171,13 @@ const Inicio = () => {
         {/* Tipos de trabajos--------------------------------------------------------------------------------------------------------------------------------------------- */}
         <section>
           <div className=" hidden sm:flex mt-10 sm:mt-[66px] sm:gap-5 gap-4 text-[17px] sm:text-[19px] sm:justify-start justify-center text-[#3b3b3b]">
-            {language ? <div>Proyectos</div> : <div> Projects</div>}
+            {language ? <div>Proyectos</div> : <div>Projects</div>}
             <div>/</div>
-            {language ? <div>Diseños</div> : <div> Designs</div>}
+            {language ? <div>Diseños</div> : <div>Designs</div>}
             <div>/</div>
-            {language ? <div>Sitios Web</div> : <div> Websites</div>}
+            {language ? <div>Sitios Web</div> : <div>Websites</div>}
             <div>/</div>
-            {language ? <div>Desarrollo</div> : <div> Development</div>}
+            {language ? <div>Desarrollo</div> : <div>Development</div>}
           </div>
         </section>
 
