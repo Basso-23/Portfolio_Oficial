@@ -30,7 +30,7 @@ const Menu = ({
                 notify_mobile();
                 setIsOpen(false);
               }}
-              className="cursor-pointer px-8 sm:py-5 py-4 border-b-[1px] border-[#333333] hover:text-[#7b7b7b] transition-all"
+              className="cursor-pointer px-8 sm:py-4 py-4 border-b-[1px] border-[#333333] hover:text-[#7b7b7b] transition-all"
             >
               {language ? <div>Correo electrónico</div> : <div>Email</div>}
             </a>
@@ -40,7 +40,7 @@ const Menu = ({
               onClick={() => {
                 setIsOpen(false);
               }}
-              className="cursor-pointer px-8 sm:py-5 py-4 border-b-[1px] border-[#333333] hover:text-[#7b7b7b] transition-all"
+              className="cursor-pointer px-8 sm:py-4 py-4 border-b-[1px] border-[#333333] hover:text-[#7b7b7b] transition-all"
             >
               Github
             </a>
@@ -50,7 +50,7 @@ const Menu = ({
               onClick={() => {
                 setIsOpen(false);
               }}
-              className="cursor-pointer px-8 sm:py-5 py-4 border-b-[1px] border-[#333333] hover:text-[#7b7b7b] transition-all"
+              className="cursor-pointer px-8 sm:py-4 py-4 border-b-[1px] border-[#333333] hover:text-[#7b7b7b] transition-all"
             >
               Linkedin
             </a>
@@ -60,7 +60,7 @@ const Menu = ({
               onClick={() => {
                 setIsOpen(false);
               }}
-              className="cursor-pointer px-8 sm:py-5 py-4 border-b-[1px] border-[#333333] hover:text-[#7b7b7b] transition-all"
+              className="cursor-pointer px-8 sm:py-4 py-4 border-b-[1px] border-[#333333] hover:text-[#7b7b7b] transition-all"
             >
               {language ? <div>Currículum</div> : <div>Resume</div>}
             </a>
@@ -70,11 +70,11 @@ const Menu = ({
                 setLanguage(true);
                 refresh();
               }}
-              className="cursor-pointer px-8 sm:py-5 py-4 border-b-[1px] border-[#333333] hover:text-[#7b7b7b] transition-all flex "
+              className="cursor-pointer px-8 sm:py-4 py-4 border-b-[1px] border-[#333333] hover:text-[#7b7b7b] transition-all flex "
             >
               <div className="flex relative">
                 Español{" "}
-                <div className=" sm:-mt-[4px] -mt-[6px]  absolute -right-8 ">
+                <div className=" sm:-mt-[4px] -mt-[3px]  absolute -right-6 ">
                   {language ? <Check /> : null}
                 </div>
               </div>
@@ -85,11 +85,11 @@ const Menu = ({
                 setLanguage(false);
                 refresh();
               }}
-              className="cursor-pointer px-8 sm:py-5 py-4 border-b-[1px] border-[#333333] hover:text-[#7b7b7b] transition-all flex"
+              className="cursor-pointer px-8 sm:py-4 py-4 border-b-[1px] border-[#333333] hover:text-[#7b7b7b] transition-all flex"
             >
               <div className="flex relative">
                 English{" "}
-                <div className=" sm:-mt-[4px] -mt-[6px]  absolute -right-8 ">
+                <div className=" sm:-mt-[4px] -mt-[3px]  absolute -right-6 ">
                   {language ? null : <Check />}
                 </div>
               </div>

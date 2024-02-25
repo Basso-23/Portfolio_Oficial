@@ -71,7 +71,7 @@ const Inicio = () => {
       setResume(
         "https://drive.google.com/file/d/1xK_8f4Jdlcjvw8a87wCpgfKEqfCBmR3O/view"
       );
-      setMtPixels("mt-[115px]");
+      setMtPixels("mt-[145px]");
     } else {
       setFiltered(projects_en);
       setCopyText("Email copied");
@@ -79,7 +79,7 @@ const Inicio = () => {
       setResume(
         "https://drive.google.com/file/d/1O2gmqslUaGKqcvuj-d_cBgdJP1XEpCw4/view"
       );
-      setMtPixels("mt-[160px]");
+      setMtPixels("mt-[185px]");
     }
   }, [language]);
 
@@ -149,18 +149,18 @@ const Inicio = () => {
         {/* Title container--------------------------------------------------------------------------------------------------------------------------------------------- */}
         <section>
           {/* Container de la notificacion de correo copiado */}
-          <div className="text-[18px] w-10">
+          <div className="text-[15px]">
             <ToastContainer />
           </div>
           {/* Title */}
-          <div className=" roboto-500 max-w-[1000px] text-[30px] sm:text-[55px] mt-10 sm:mt-[80px] sm:leading-[73px] leading-[45px]">
+          <div className=" roboto-500 max-w-[750px] text-[30px] sm:text-[43px] mt-10 sm:mt-[60px] sm:leading-[60px] leading-[40px]">
             {language ? (
               <div>
                 ¡Bienvenido a mi portafolio de proyectos! Aquí encontrarás una
                 muestra de mi trabajo.
               </div>
             ) : (
-              <div className="sm:max-w-[900px]">
+              <div className="sm:max-w-[700px]">
                 Welcome to my project portfolio! Here you&apos;ll find a sample
                 of my work.
               </div>
