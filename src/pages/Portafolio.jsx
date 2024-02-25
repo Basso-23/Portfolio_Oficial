@@ -119,7 +119,7 @@ const Inicio = () => {
         />
       </Head>
 
-      <main className="min-h-screen  max-w-[1500px] px-3 sm:px-8 mx-auto pt-10 sm:pt-[65px]">
+      <main className="min-h-screen  max-w-[1200px] px-3 sm:px-[26px] mx-auto pt-10 sm:pt-[52px]">
         {/* Navbar container--------------------------------------------------------------------------------------------------------------------------------------------- */}
         <section className=" flex justify-between items-center relative ">
           <Navbar

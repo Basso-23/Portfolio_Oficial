@@ -6,8 +6,8 @@ const Send = () => {
         fill="none"
         stroke-width="0"
         viewBox="0 0 24 24"
-        height="22px"
-        width="22px"
+        height="16px"
+        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
