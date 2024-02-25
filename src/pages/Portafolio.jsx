@@ -119,7 +119,7 @@ const Inicio = () => {
         />
       </Head>
 
-      <main className="min-h-screen  max-w-[1200px] px-3 sm:px-[26px] mx-auto pt-10 sm:pt-[52px]">
+      <main className="min-h-screen  max-w-[1300px] px-3 sm:px-[26px] mx-auto pt-10 sm:pt-[52px]">
         {/* Navbar container--------------------------------------------------------------------------------------------------------------------------------------------- */}
         <section className=" flex justify-between items-center relative ">
           <Navbar
@@ -170,7 +170,7 @@ const Inicio = () => {
 
         {/* Tipos de trabajos--------------------------------------------------------------------------------------------------------------------------------------------- */}
         <section>
-          <div className=" hidden sm:flex mt-10 sm:mt-[66px] sm:gap-5 gap-4 text-[17px] sm:text-[19px] sm:justify-start justify-center text-[#3b3b3b]">
+          <div className=" hidden sm:flex mt-10 sm:mt-[60px] gap-4 text-[17px] sm:text-[15px] sm:justify-start justify-center text-[#3b3b3b]">
             {language ? <div>Proyectos</div> : <div>Projects</div>}
             <div>/</div>
             {language ? <div>Diseños</div> : <div>Designs</div>}
@@ -187,15 +187,15 @@ const Inicio = () => {
           <div
             className={
               isOpen
-                ? `grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-9 sm:mt-[30px] ${mtPixels} transition-all duration-500`
-                : `grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-9 sm:mt-[30px] mt-[30px] transition-all duration-500`
+                ? `grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-9 sm:mt-[25px] ${mtPixels} transition-all duration-500`
+                : `grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-9 sm:mt-[25px] mt-[30px] transition-all duration-500`
             }
           >
             {filtered
               .map((item) => (
                 <div
                   key={item.id}
-                  className={`${item.image} w-full h-[350px] sm:h-[500px] lg:h-[400px] border-[1px] border-[#e2e2e2] relative`}
+                  className={`${item.image} w-full aspect-square max-h-[350px] max-w-[600px]  border-[1px] border-[#e2e2e2] relative mx-auto`}
                 >
                   <div className="focus w-full h-full relative">
                     <a
@@ -204,9 +204,9 @@ const Inicio = () => {
                       className="w-full h-full z-50 absolute"
                     ></a>
                   </div>
-                  <div className="focus-content sm:flex hidden justify-center flex-col gap-1 pl-10 tracking-wide">
-                    <div className="text-[22px] roboto-light">{item.title}</div>
-                    <div className="text-[16px] text-[#b0b0b0]">
+                  <div className="focus-content sm:flex hidden justify-center flex-col gap-0 pl-10 tracking-wide">
+                    <div className="text-[18px] roboto-light">{item.title}</div>
+                    <div className="text-[13px] text-[#b0b0b0]">
                       {item.category}
                     </div>
                   </div>

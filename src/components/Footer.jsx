@@ -1,9 +1,9 @@
 const Footer = ({ language, setLanguage, notify, refresh, resume }) => {
   return (
     <>
-      <section className="sm:py-12 py-7 flex sm:justify-between text-[#707070] max-w-[1500px] px-3 sm:px-8 mx-auto flex-wrap gap-4">
-        <div> © 2024 CarlosBaso</div>
-        <div className="sm:flex hidden gap-5">
+      <section className="sm:py-10 py-7 flex sm:justify-between text-[#707070] sm:text-[13px] text-[14px] max-w-[1300px] px-3 sm:px-8 mx-auto flex-wrap gap-4">
+        <div className=" mx-auto sm:mx-0"> © 2024 CarlosBaso</div>
+        <div className="sm:flex hidden gap-6">
           <div onClick={notify} className=" cursor-pointer">
             {language ? <div>Correo electrónico</div> : <div>Email</div>}
           </div>
