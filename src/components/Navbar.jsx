@@ -1,6 +1,6 @@
-import Clipboard from "@/assets/Clipboard";
-import Send from "@/assets/Send";
-import Check from "@/assets/Check";
+import Clipboard from "@/assets/Icons/Clipboard";
+import Send from "@/assets/Icons/Send";
+import Check from "@/assets/Icons/Check";
 
 const Navbar = ({ language, setLanguage, notify, refresh, resume }) => {
   return (

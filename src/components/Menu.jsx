@@ -1,4 +1,4 @@
-import Check from "@/assets/Check";
+import Check from "@/assets/Icons/Check";
 import { motion as m, AnimatePresence } from "framer-motion";
 
 const Menu = ({
