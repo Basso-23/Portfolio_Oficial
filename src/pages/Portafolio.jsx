@@ -195,7 +195,7 @@ const Inicio = () => {
               .map((item) => (
                 <div
                   key={item.id}
-                  className={`${item.image} w-full aspect-square max-h-[350px]   border-[1px] border-[#e2e2e2] relative mx-auto`}
+                  className={`${item.image} w-full aspect-square max-h-[325px] border-[1px] border-[#e2e2e2] relative mx-auto`}
                 >
                   <div className="focus w-full h-full relative">
                     <a
