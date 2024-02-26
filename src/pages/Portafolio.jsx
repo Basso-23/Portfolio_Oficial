@@ -170,18 +170,32 @@ const Inicio = () => {
         </section>
 
         {/* Partners--------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <section className="mt-12 md:block hidden">
+        <section className="mt-16 md:block hidden">
           <div className="flex flex-col text-center -mb-4   ">
-            <div className="w-[350px] mx-auto h-[1px] bg-[#e0e0e0] mb-7 mt-0"></div>
+            <div className=" w-[300px] mx-auto h-[1px] bg-[#e0e0e0] mb-7 mt-0"></div>
 
             <h1 className="text-[35px]  text-black">
-              Trusted by over 20+ clients
+              {language ? (
+                <div> Siempre entregando excelencia</div>
+              ) : (
+                <div>Always delivering excellence</div>
+              )}
             </h1>
             <h2 className="max-w-[500px] mx-auto mt-2 text-[#808080]">
-              Our clients are my top priority, and I&apos;m commited to
-              providing them with the hisghest level of service.
+              {language ? (
+                <div>
+                  Algunas de las empresas con las que he podido trabajar,
+                  siempre comprometido a proporcionar resultados del más alto
+                  nivel.
+                </div>
+              ) : (
+                <div>
+                  Some of the companies I have been able to work with, always
+                  committed to providing top-level results.
+                </div>
+              )}
             </h2>
-            <div className="w-[350px] mx-auto h-[1px] bg-[#e0e0e0] mb-10 mt-10"></div>
+            <div className="w-[300px] mx-auto h-[1px] bg-[#e0e0e0] mb-10 mt-10"></div>
           </div>
           <Slider
             width="300px"
@@ -207,6 +221,7 @@ const Inicio = () => {
             </Slider.Slide>
           </Slider>
         </section>
+
         {/* Tipos de trabajos--------------------------------------------------------------------------------------------------------------------------------------------- */}
         <section>
           <div className=" hidden md:flex mt-10 sm:mt-[50px] gap-4 text-[17px] sm:text-[15px] sm:justify-start justify-center text-[#808080]">
