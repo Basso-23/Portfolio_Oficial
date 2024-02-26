@@ -170,18 +170,14 @@ const Inicio = () => {
         </section>
 
         {/* Partners--------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <section className="mt-16 md:block hidden">
+        <section className="mt-11 md:block hidden">
           <div className="flex flex-col text-center -mb-4   ">
-            <div className=" w-[300px] mx-auto h-[1px] bg-[#e0e0e0] mb-7 mt-0"></div>
+            <div className=" w-[300px] mx-auto h-[1px] bg-[#e0e0e0] mb-8 mt-0"></div>
 
-            <h1 className="text-[35px]  text-black">
-              {language ? (
-                <div> Siempre entregando excelencia</div>
-              ) : (
-                <div>Always delivering excellence</div>
-              )}
+            <h1 className="text-[35px]  text-black roboto-500 ">
+              {language ? <div>Experiencia</div> : <div>Experience</div>}
             </h1>
-            <h2 className="max-w-[500px] mx-auto mt-2 text-[#808080]">
+            <h2 className="max-w-[500px] mx-auto mt-2 text-[#808080] mb-10">
               {language ? (
                 <div>
                   Algunas de las empresas con las que he podido trabajar,
@@ -195,7 +191,6 @@ const Inicio = () => {
                 </div>
               )}
             </h2>
-            <div className="w-[300px] mx-auto h-[1px] bg-[#e0e0e0] mb-10 mt-10"></div>
           </div>
           <Slider
             width="300px"
