@@ -154,7 +154,7 @@ const Inicio = () => {
             <ToastContainer />
           </div>
           {/* Title */}
-          <div className=" roboto-500 lg:max-w-[1000px] text-[27px] sm:text-[43px] mt-8 sm:mt-[60px] sm:leading-[60px] leading-[40px]">
+          <div className=" roboto-500 lg:max-w-[1000px] text-[27px] sm:text-[43px] mt-8 sm:mt-[60px] sm:leading-[60px] leading-[40px] md:text-center mx-auto">
             {language ? (
               <div>
                 Hola soy Carlos Baso un Ing. de Software. Bienvenido a mi
@@ -170,10 +170,19 @@ const Inicio = () => {
         </section>
 
         {/* Partners--------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <section className="mt-10 md:block hidden">
-          <h1 className="text-[15px] text-[#808080]  tracking-wide uppercase">
-            {language ? <div>Algunos Clientes</div> : <div>Some Clients</div>}
-          </h1>
+        <section className="mt-12 md:block hidden">
+          <div className="flex flex-col text-center -mb-4   ">
+            <div className="w-[350px] mx-auto h-[1px] bg-[#e0e0e0] mb-7 mt-0"></div>
+
+            <h1 className="text-[35px]  text-black">
+              Trusted by over 20+ clients
+            </h1>
+            <h2 className="max-w-[500px] mx-auto mt-2 text-[#808080]">
+              Our clients are my top priority, and I&apos;m commited to
+              providing them with the hisghest level of service.
+            </h2>
+            <div className="w-[350px] mx-auto h-[1px] bg-[#e0e0e0] mb-10 mt-10"></div>
+          </div>
           <Slider
             width="300px"
             duration={40}
@@ -182,13 +191,19 @@ const Inicio = () => {
             blurBoderColor={"#fff"}
           >
             <Slider.Slide>
-              <div className="hks aspect-square w-[85px] saturate-0 mx-auto"></div>
+              <div className=" bg-[#F9F9FB] w-[90%] h-[67%] flex mx-auto">
+                <div className="hks aspect-square w-[200px] saturate-0 mx-auto"></div>
+              </div>
             </Slider.Slide>
             <Slider.Slide>
-              <div className="firma aspect-square w-[200px] saturate-0 mx-auto"></div>
+              <div className=" bg-[#F9F9FB] w-[90%] h-[67%] flex mx-auto">
+                <div className="firma aspect-square w-[200px] saturate-0 mx-auto"></div>
+              </div>
             </Slider.Slide>
             <Slider.Slide>
-              <div className="escritorios aspect-square w-[150px] saturate-0 mx-auto"></div>
+              <div className=" bg-[#F9F9FB] w-[90%] h-[67%] flex mx-auto">
+                <div className="escritorios aspect-square w-[60px] saturate-0 mx-auto"></div>
+              </div>
             </Slider.Slide>
           </Slider>
         </section>
@@ -261,7 +276,7 @@ const Inicio = () => {
       </main>
 
       {/* Separador entre main y footer--------------------------------------------------------------------------------------------------------------------------------------------- */}
-      <section className="bg-[#ededed] h-[1px] w-full sm:mt-32 mt-20"></section>
+      <section className="bg-[#e0e0e0] h-[1px] w-full sm:mt-32 mt-20"></section>
 
       {/* Footer--------------------------------------------------------------------------------------------------------------------------------------------- */}
       <Footer
