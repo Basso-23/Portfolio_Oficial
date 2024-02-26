@@ -12,6 +12,7 @@ import { IoIosArrowUp } from "react-icons/io";
 import Navbar from "@/components/Navbar";
 import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
+import Slider from "react-infinite-logo-slider";
 
 const Inicio = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,7 +72,7 @@ const Inicio = () => {
       setResume(
         "https://drive.google.com/file/d/1xK_8f4Jdlcjvw8a87wCpgfKEqfCBmR3O/view"
       );
-      setMtPixels("mt-[145px]");
+      setMtPixels("mt-[23vh]");
     } else {
       setFiltered(projects_en);
       setCopyText("Email copied");
@@ -79,7 +80,7 @@ const Inicio = () => {
       setResume(
         "https://drive.google.com/file/d/1O2gmqslUaGKqcvuj-d_cBgdJP1XEpCw4/view"
       );
-      setMtPixels("mt-[185px]");
+      setMtPixels("mt-[23vh]");
     }
   }, [language]);
 
@@ -153,31 +154,58 @@ const Inicio = () => {
             <ToastContainer />
           </div>
           {/* Title */}
-          <div className=" roboto-500 max-w-[750px] text-[30px] sm:text-[43px] mt-10 sm:mt-[60px] sm:leading-[60px] leading-[40px]">
+          <div className=" roboto-500 lg:max-w-[1000px] text-[27px] sm:text-[43px] mt-8 sm:mt-[60px] sm:leading-[60px] leading-[40px]">
             {language ? (
               <div>
-                ¡Bienvenido a mi portafolio de proyectos! Aquí encontrarás una
-                muestra de mi trabajo.
+                Hola soy Carlos Baso un Ing. de Software. Bienvenido a mi
+                portafolio de proyectos.
               </div>
             ) : (
-              <div className="sm:max-w-[700px]">
-                Welcome to my project portfolio! Here you&apos;ll find a sample
-                of my work.
+              <div>
+                Hello I&apos;m Carlos Baso a Software Engineer. Welcome to my
+                project portfolio.
               </div>
             )}
           </div>
         </section>
 
+        {/* Partners--------------------------------------------------------------------------------------------------------------------------------------------- */}
+        <section className="mt-10 md:block hidden">
+          <h1 className="text-[15px] text-[#808080]  tracking-wide uppercase">
+            {language ? <div>Algunos Clientes</div> : <div>Some Clients</div>}
+          </h1>
+          <Slider
+            width="300px"
+            duration={40}
+            pauseOnHover={false}
+            blurBorders={true}
+            blurBoderColor={"#fff"}
+          >
+            <Slider.Slide>
+              <div className="hks aspect-square w-[85px] saturate-0 mx-auto"></div>
+            </Slider.Slide>
+            <Slider.Slide>
+              <div className="firma aspect-square w-[200px] saturate-0 mx-auto"></div>
+            </Slider.Slide>
+            <Slider.Slide>
+              <div className="escritorios aspect-square w-[150px] saturate-0 mx-auto"></div>
+            </Slider.Slide>
+          </Slider>
+        </section>
         {/* Tipos de trabajos--------------------------------------------------------------------------------------------------------------------------------------------- */}
         <section>
-          <div className=" hidden sm:flex mt-10 sm:mt-[60px] gap-4 text-[17px] sm:text-[15px] sm:justify-start justify-center text-[#3b3b3b]">
-            {language ? <div>Proyectos</div> : <div>Projects</div>}
+          <div className=" hidden md:flex mt-10 sm:mt-[50px] gap-4 text-[17px] sm:text-[15px] sm:justify-start justify-center text-[#808080]">
+            <div>JavaScript</div>
             <div>/</div>
-            {language ? <div>Diseños</div> : <div>Designs</div>}
+            <div>React JS</div>
             <div>/</div>
-            {language ? <div>Sitios Web</div> : <div>Websites</div>}
+            <div>Next JS</div>
             <div>/</div>
-            {language ? <div>Desarrollo</div> : <div>Development</div>}
+            <div>Tailwind CSS</div>
+            <div>/</div>
+            <div>Astro</div>
+            <div>/</div>
+            <div>Git</div>
           </div>
         </section>
 
@@ -187,24 +215,39 @@ const Inicio = () => {
           <div
             className={
               isOpen
-                ? `grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-9 sm:mt-[25px] ${mtPixels} transition-all duration-500`
-                : `grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-9 sm:mt-[25px] mt-[30px] transition-all duration-500`
+                ? `grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-9 sm:mt-[50px] md:mt-[25px] ${mtPixels} transition-all duration-500`
+                : `grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-9 sm:mt-[50px] md:mt-[25px] mt-[30px] transition-all duration-500`
             }
           >
             {filtered
               .map((item) => (
                 <div
                   key={item.id}
-                  className={`${item.image} w-full aspect-square max-h-[325px] border-[1px] border-[#e2e2e2] relative mx-auto`}
+                  className="flex w-full flex-col aspect-square max-h-[325px]"
                 >
-                  <div className="focus w-full h-full relative">
-                    <a
-                      target="_blank"
-                      href={item.url}
-                      className="w-full h-full z-50 absolute"
-                    ></a>
+                  <div
+                    className={`${item.image} w-full aspect-square max-h-[325px] border-[1px] border-[#e2e2e2] relative mx-auto`}
+                  >
+                    {/* Anchor */}
+                    <div className="focus w-full h-full relative">
+                      <a
+                        target="_blank"
+                        href={item.url}
+                        className="w-full h-full z-50 absolute"
+                      ></a>
+                    </div>
+                    {/* Tag desktop */}
+                    <div className="focus-content sm:flex hidden justify-center flex-col gap-0 pl-10 tracking-wide max-w-[350px]">
+                      <div className="text-[18px] roboto-light">
+                        {item.title}
+                      </div>
+                      <div className="text-[13px] text-[#b0b0b0]">
+                        {item.category}
+                      </div>
+                    </div>
                   </div>
-                  <div className="focus-content sm:flex hidden justify-center flex-col gap-0 pl-10 tracking-wide max-w-[350px]">
+                  {/* Tag mobile */}
+                  <div className=" sm: sm:hidden bg-[#101010] text-white text-center py-2 border-[1px] border-white">
                     <div className="text-[18px] roboto-light">{item.title}</div>
                     <div className="text-[13px] text-[#b0b0b0]">
                       {item.category}

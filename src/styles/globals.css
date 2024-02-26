@@ -186,3 +186,24 @@
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
+
+.hks {
+  background-image: url(../assets/partners/hks.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.firma {
+  background-image: url(../assets/partners/firma.PNG);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.escritorios {
+  background-image: url(../assets/partners/escritorios.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
