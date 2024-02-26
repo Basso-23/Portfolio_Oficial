@@ -195,7 +195,7 @@ const Inicio = () => {
               .map((item) => (
                 <div
                   key={item.id}
-                  className={`${item.image} w-full aspect-square max-h-[350px] max-w-[600px]  border-[1px] border-[#e2e2e2] relative mx-auto`}
+                  className={`${item.image} w-full aspect-square max-h-[350px]   border-[1px] border-[#e2e2e2] relative mx-auto`}
                 >
                   <div className="focus w-full h-full relative">
                     <a
@@ -204,7 +204,7 @@ const Inicio = () => {
                       className="w-full h-full z-50 absolute"
                     ></a>
                   </div>
-                  <div className="focus-content sm:flex hidden justify-center flex-col gap-0 pl-10 tracking-wide">
+                  <div className="focus-content sm:flex hidden justify-center flex-col gap-0 pl-10 tracking-wide max-w-[350px]">
                     <div className="text-[18px] roboto-light">{item.title}</div>
                     <div className="text-[13px] text-[#b0b0b0]">
                       {item.category}
