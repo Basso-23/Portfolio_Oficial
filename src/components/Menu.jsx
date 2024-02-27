@@ -23,7 +23,7 @@ const Menu = ({
               delay: 0,
             }}
             exit={{ opacity: 0 }}
-            className="lg:hidden flex absolute w-full sm:mt-[395px] mt-[400px] bg-[#101010] flex-col text-white uppercase roboto-500 z-[60] sm:text-[12px] text-[12px]"
+            className="lg:hidden sm:flex hidden absolute w-full sm:mt-[395px] mt-[400px] bg-[#101010] flex-col text-white uppercase roboto-500 z-[60] sm:text-[12px] text-[12px]"
           >
             <a
               onClick={() => {

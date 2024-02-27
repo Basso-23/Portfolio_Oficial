@@ -13,6 +13,7 @@ import Navbar from "@/components/Navbar";
 import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 import Slider from "react-infinite-logo-slider";
+import Menu_mobile from "@/components/Menu_mobile";
 
 const Inicio = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,6 @@ const Inicio = () => {
   const [filtered, setFiltered] = useState(projects_es);
   const [copyText, setCopyText] = useState("Correo electrónico copiado");
   const [pageTitle, setPageTitle] = useState("Portafolio - Carlos Baso");
-  const [mtPixels, setMtPixels] = useState("mt-[115px]");
   const [resume, setResume] = useState(
     "https://drive.google.com/file/d/1xK_8f4Jdlcjvw8a87wCpgfKEqfCBmR3O/view"
   );
@@ -72,7 +72,6 @@ const Inicio = () => {
       setResume(
         "https://drive.google.com/file/d/1xK_8f4Jdlcjvw8a87wCpgfKEqfCBmR3O/view"
       );
-      setMtPixels("mt-[48vw]");
     } else {
       setFiltered(projects_en);
       setCopyText("Email copied");
@@ -80,7 +79,6 @@ const Inicio = () => {
       setResume(
         "https://drive.google.com/file/d/1O2gmqslUaGKqcvuj-d_cBgdJP1XEpCw4/view"
       );
-      setMtPixels("mt-[23vw]");
     }
   }, [language]);
 
@@ -154,7 +152,7 @@ const Inicio = () => {
             <ToastContainer />
           </div>
           {/* Title */}
-          <div className=" roboto-500 lg:max-w-[1000px] max-w-[600px] text-[27px] sm:text-[36px] lg:text-[43px] mt-8 sm:mt-[60px] md:leading-[60px] sm:leading-[50px] leading-[40px]">
+          <div className=" sm:flex hidden roboto-500 lg:max-w-[1000px] max-w-[600px] text-[27px] sm:text-[36px] lg:text-[43px] mt-8 sm:mt-[60px] md:leading-[60px] sm:leading-[50px] leading-[40px]">
             {language ? (
               <div>
                 Hola soy Carlos Baso un Ing. de Software. Bienvenido a mi
@@ -167,7 +165,32 @@ const Inicio = () => {
               </div>
             )}
           </div>
+          {/* Title_mobile */}
+          {isOpen ? null : (
+            <div className="sm:hidden flex roboto-500 lg:max-w-[1000px] max-w-[600px] text-[27px] sm:text-[36px] lg:text-[43px] mt-8 sm:mt-[60px] md:leading-[60px] sm:leading-[50px] leading-[40px]">
+              {language ? (
+                <div>
+                  Hola soy Carlos Baso un Ing. de Software. Bienvenido a mi
+                  portafolio de proyectos.
+                </div>
+              ) : (
+                <div>
+                  Hello I&apos;m Carlos Baso a Software Engineer. Welcome to my
+                  project portfolio.
+                </div>
+              )}
+            </div>
+          )}
         </section>
+        <Menu_mobile
+          language={language}
+          setLanguage={setLanguage}
+          notify_mobile={notify_mobile}
+          refresh={refresh}
+          resume={resume}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+        />
 
         {/* Tipos de trabajos--------------------------------------------------------------------------------------------------------------------------------------------- */}
         <section>
@@ -193,8 +216,8 @@ const Inicio = () => {
           <div
             className={
               isOpen
-                ? `grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-9 md:mt-[35px] sm:mt-[135px] ${mtPixels} transition-all duration-500`
-                : `grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-9 md:mt-[35px] sm:mt-[25px] mt-[30px] transition-all duration-500`
+                ? `grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-9 md:mt-[35px] sm:mt-[135px] mt-[20px] transition-all duration-500`
+                : `grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-9 md:mt-[35px] sm:mt-[25px] mt-[20px] transition-all duration-500`
             }
           >
             {filtered
