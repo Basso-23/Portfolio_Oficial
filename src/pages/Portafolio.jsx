@@ -133,7 +133,7 @@ const Inicio = () => {
           <div className="lg:hidden flex">
             <Hamburger toggled={isOpen} toggle={setIsOpen} size={35} />
           </div>
-
+          {/* Menu desktop */}
           <Menu
             language={language}
             setLanguage={setLanguage}
@@ -151,7 +151,7 @@ const Inicio = () => {
           <div className="text-[15px]">
             <ToastContainer />
           </div>
-          {/* Title */}
+          {/* Title desktop*/}
           <div className=" sm:flex hidden roboto-500 lg:max-w-[1000px] max-w-[600px] text-[27px] sm:text-[36px] lg:text-[43px] mt-8 sm:mt-[60px] md:leading-[60px] sm:leading-[50px] leading-[40px]">
             {language ? (
               <div>
@@ -165,7 +165,7 @@ const Inicio = () => {
               </div>
             )}
           </div>
-          {/* Title_mobile */}
+          {/* Title mobile */}
           {isOpen ? null : (
             <div className="sm:hidden flex roboto-500 lg:max-w-[1000px] max-w-[600px] text-[27px] sm:text-[36px] lg:text-[43px] mt-8 sm:mt-[60px] md:leading-[60px] sm:leading-[50px] leading-[40px]">
               {language ? (
@@ -182,6 +182,7 @@ const Inicio = () => {
             </div>
           )}
         </section>
+        {/* Menu mobile */}
         <Menu_mobile
           language={language}
           setLanguage={setLanguage}
@@ -265,9 +266,11 @@ const Inicio = () => {
             <div className=" w-[250px] mx-auto  h-[1px] bg-[#e0e0e0] mb-8 mt-0"></div>
 
             <h1 className="text-[35px]  text-black roboto-500 ">
+              {/* Titulo */}
               {language ? <div>Experiencia</div> : <div>Experience</div>}
             </h1>
-            <h2 className="max-w-[500px] mx-auto mt-2 text-[#808080] mb-10">
+            <h2 className="max-w-[500px] mx-auto mt-2 text-[#808080] mb-10 text-[15px]">
+              {/* Subtitulo */}
               {language ? (
                 <div>
                   Algunas de las empresas con las que he podido trabajar,
@@ -309,7 +312,7 @@ const Inicio = () => {
       </main>
 
       {/* Separador entre main y footer--------------------------------------------------------------------------------------------------------------------------------------------- */}
-      <section className="bg-[#e0e0e0] h-[1px] w-full sm:mt-32 mt-20"></section>
+      <section className="bg-[#e0e0e0] h-[0.9px] w-full sm:mt-32 mt-20"></section>
 
       {/* Footer--------------------------------------------------------------------------------------------------------------------------------------------- */}
       <Footer
