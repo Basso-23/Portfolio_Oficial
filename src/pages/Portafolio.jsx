@@ -125,9 +125,9 @@ const Inicio = () => {
         />
       </Head>
 
-      <main className="min-h-screen  max-w-[1300px] px-0 sm:px-[26px] mx-auto pt-10 sm:pt-[52px]">
+      <main className="min-h-screen  max-w-[1300px] px-[8px] sm:px-[38px] mx-auto pt-10 sm:pt-[52px]">
         {/* Navbar container--------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <section className=" flex justify-between items-center relative sm:mx-3 mx-[8px] ">
+        <section className=" flex justify-between items-center relative ">
           <Navbar
             language={language}
             setLanguage={setLanguage}
@@ -153,7 +153,7 @@ const Inicio = () => {
         </section>
 
         {/* Title container--------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <section className="sm:px-3 px-[8px]">
+        <section className="">
           {/* Container de la notificacion de correo copiado */}
           <div className="text-[15px]">
             <ToastContainer />
@@ -202,7 +202,7 @@ const Inicio = () => {
 
         {/* Tipos de trabajos--------------------------------------------------------------------------------------------------------------------------------------------- */}
         <section>
-          <div className=" hidden md:flex mt-10 sm:mt-[50px] gap-4 text-[17px] sm:text-[15px] sm:justify-start justify-center text-[#808080] px-3">
+          <div className=" hidden md:flex mt-10 sm:mt-[50px] gap-4 text-[17px] sm:text-[15px] sm:justify-start justify-center text-[#808080]">
             <div>JavaScript</div>
             <div>/</div>
             <div>React JS</div>
@@ -218,7 +218,7 @@ const Inicio = () => {
         </section>
 
         {/* Projects container--------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <section className=" sm:px-3 px-[8px]">
+        <section className=" ">
           {/* Projects */}
 
           <div
