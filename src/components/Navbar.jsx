@@ -6,7 +6,7 @@ const Navbar = ({ language, setLanguage, notify, refresh, resume }) => {
   return (
     <>
       {/* Logo */}
-      <div className=" pointer-events-none roboto-bold sm:text-[30px] text-[34px] border-[3.5px]  border-black sm:w-[50px] sm:h-[48px] w-[59px] h-[56px] roboto-500 flex items-center text-center justify-center">
+      <div className=" pointer-events-none roboto-bold text-[30px] border-[3.5px]  border-black w-[50px] h-[48px]  roboto-500 flex items-center text-center justify-center">
         P
       </div>
       {/* Navbar----------------------------------------------- */}

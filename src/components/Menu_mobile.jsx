@@ -15,7 +15,7 @@ const Menu_mobile = ({
       {/* Menu content----------------------------------------------- */}
 
       {isOpen ? (
-        <div className="sm:hidden flex w-full mt-[20px] bg-[#101010] flex-col text-white uppercase roboto-500 sm:text-[12px] text-[12px]">
+        <div className="sm:hidden flex w-full mt-[20px] bg-[#101010] flex-col text-white uppercase roboto-500 sm:text-[12px] text-[12px] border-l-[1px] border-r-[1px] border-white">
           <a
             onClick={() => {
               notify_mobile();

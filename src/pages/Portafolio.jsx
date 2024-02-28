@@ -89,6 +89,12 @@ const Inicio = () => {
     window.scrollTo(0, 0);
   };
 
+  const menuWidth = () => {
+    if (window.innerWidth > 850) {
+      setIsOpen(false);
+    }
+  };
+
   {
     /* Para el boton de scroll to top de abajo a la derecha */
   }
@@ -106,6 +112,7 @@ const Inicio = () => {
   };
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", scrollTopButton);
+    window.addEventListener("resize", menuWidth);
   }
 
   return (
@@ -118,9 +125,9 @@ const Inicio = () => {
         />
       </Head>
 
-      <main className="min-h-screen  max-w-[1300px] px-3 sm:px-[26px] mx-auto pt-10 sm:pt-[52px]">
+      <main className="min-h-screen  max-w-[1300px] px-0 sm:px-[26px] mx-auto pt-10 sm:pt-[52px]">
         {/* Navbar container--------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <section className=" flex justify-between items-center relative ">
+        <section className=" flex justify-between items-center relative sm:mx-3 mx-[8px] ">
           <Navbar
             language={language}
             setLanguage={setLanguage}
@@ -130,8 +137,8 @@ const Inicio = () => {
           />
 
           {/* Menu icon */}
-          <div className="lg:hidden flex">
-            <Hamburger toggled={isOpen} toggle={setIsOpen} size={35} />
+          <div className="lg:hidden flex ">
+            <Hamburger toggled={isOpen} toggle={setIsOpen} size={30} />
           </div>
           {/* Menu desktop */}
           <Menu
@@ -146,37 +153,37 @@ const Inicio = () => {
         </section>
 
         {/* Title container--------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <section>
+        <section className="sm:px-3 px-[8px]">
           {/* Container de la notificacion de correo copiado */}
           <div className="text-[15px]">
             <ToastContainer />
           </div>
           {/* Title desktop*/}
-          <div className=" sm:flex hidden roboto-500 lg:max-w-[1000px] max-w-[600px] text-[27px] sm:text-[36px] lg:text-[43px] mt-8 sm:mt-[60px] md:leading-[60px] sm:leading-[50px] leading-[40px]">
+          <div className=" sm:flex hidden roboto-500  lg:max-w-[1000px] max-w-[500px] text-[27px] sm:text-[35px] lg:text-[43px] mt-8 sm:mt-[60px] lg:leading-[60px] sm:leading-[50px] leading-[40px]">
             {language ? (
               <div>
                 Hola soy Carlos Baso un Ing. de Software. Bienvenido a mi
-                portafolio de proyectos.
+                portafolio.
               </div>
             ) : (
               <div>
                 Hello I&apos;m Carlos Baso a Software Engineer. Welcome to my
-                project portfolio.
+                portfolio.
               </div>
             )}
           </div>
           {/* Title mobile */}
           {isOpen ? null : (
-            <div className="sm:hidden flex roboto-500 lg:max-w-[1000px] max-w-[600px] text-[27px] sm:text-[36px] lg:text-[43px] mt-8 sm:mt-[60px] md:leading-[60px] sm:leading-[50px] leading-[40px]">
+            <div className="sm:hidden flex roboto-500 lg:max-w-[1000px] max-w-[600px] text-[27px] sm:text-[43px] lg:text-[43px] mt-8 sm:mt-[60px] lg:leading-[60px] sm:leading-[50px] leading-[40px]">
               {language ? (
                 <div>
                   Hola soy Carlos Baso un Ing. de Software. Bienvenido a mi
-                  portafolio de proyectos.
+                  portafolio.
                 </div>
               ) : (
                 <div>
                   Hello I&apos;m Carlos Baso a Software Engineer. Welcome to my
-                  project portfolio.
+                  portfolio.
                 </div>
               )}
             </div>
@@ -195,7 +202,7 @@ const Inicio = () => {
 
         {/* Tipos de trabajos--------------------------------------------------------------------------------------------------------------------------------------------- */}
         <section>
-          <div className=" hidden md:flex mt-10 sm:mt-[50px] gap-4 text-[17px] sm:text-[15px] sm:justify-start justify-center text-[#808080]">
+          <div className=" hidden md:flex mt-10 sm:mt-[50px] gap-4 text-[17px] sm:text-[15px] sm:justify-start justify-center text-[#808080] px-3">
             <div>JavaScript</div>
             <div>/</div>
             <div>React JS</div>
@@ -211,13 +218,13 @@ const Inicio = () => {
         </section>
 
         {/* Projects container--------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <section>
+        <section className=" sm:px-3">
           {/* Projects */}
 
           <div
             className={
               isOpen
-                ? `grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-9 md:mt-[35px] sm:mt-[135px] mt-[20px] transition-all duration-500`
+                ? `grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-9 md:mt-[65px] sm:mt-[135px] mt-[20px] transition-all duration-500`
                 : `grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-9 md:mt-[35px] sm:mt-[25px] mt-[20px] transition-all duration-500`
             }
           >
@@ -293,17 +300,17 @@ const Inicio = () => {
             blurBoderColor={"#fff"}
           >
             <Slider.Slide>
-              <div className=" bg-[#f3f3f3] w-[90%] h-[67%] flex mx-auto">
+              <div className=" bg-[#f9f9f9] w-[90%] h-[67%] flex mx-auto">
                 <div className="hks aspect-square w-[200px] saturate-0 mx-auto"></div>
               </div>
             </Slider.Slide>
             <Slider.Slide>
-              <div className=" bg-[#f3f3f3] w-[90%] h-[67%] flex mx-auto">
+              <div className=" bg-[#f9f9f9] w-[90%] h-[67%] flex mx-auto">
                 <div className="firma aspect-square w-[200px] saturate-0 mx-auto"></div>
               </div>
             </Slider.Slide>
             <Slider.Slide>
-              <div className=" bg-[#f3f3f3] w-[90%] h-[67%] flex mx-auto">
+              <div className=" bg-[#f9f9f9] w-[90%] h-[67%] flex mx-auto">
                 <div className="escritorios aspect-square w-[60px] saturate-0 mx-auto"></div>
               </div>
             </Slider.Slide>
@@ -312,7 +319,7 @@ const Inicio = () => {
       </main>
 
       {/* Separador entre main y footer--------------------------------------------------------------------------------------------------------------------------------------------- */}
-      <section className="bg-[#e0e0e0] h-[0.9px] w-full sm:mt-32 mt-20"></section>
+      <section className="bg-[#eeeeee] h-[0.9px] w-full sm:mt-32 mt-20"></section>
 
       {/* Footer--------------------------------------------------------------------------------------------------------------------------------------------- */}
       <Footer
