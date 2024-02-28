@@ -218,7 +218,7 @@ const Inicio = () => {
         </section>
 
         {/* Projects container--------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <section className=" sm:px-3">
+        <section className=" sm:px-3 px-[8px]">
           {/* Projects */}
 
           <div
