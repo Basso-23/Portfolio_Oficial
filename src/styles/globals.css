@@ -48,6 +48,12 @@
   src: url(../../public/Roboto-Light.ttf);
 }
 
+.texto {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .p1 {
   background-image: url(../assets/images/p1.webp);
   background-size: cover;
@@ -203,6 +209,13 @@
 
 .escritorios {
   background-image: url(../assets/partners/escritorios.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.metas {
+  background-image: url(../assets/partners/metas.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

@@ -115,6 +115,14 @@ const Inicio = () => {
     window.addEventListener("resize", menuWidth);
   }
 
+  const Badge = ({ name }) => {
+    return (
+      <div className=" bg-[#101010] text-white py-[4px] px-[10px] text-[12px] tracking-wide min-w-[100px] text-center">
+        {name}
+      </div>
+    );
+  };
+
   return (
     <div>
       <Head>
@@ -125,7 +133,7 @@ const Inicio = () => {
         />
       </Head>
 
-      <main className="min-h-screen  max-w-[1300px] px-[8px] sm:px-[38px] mx-auto pt-10 sm:pt-[52px]">
+      <main className="min-h-[100svh] max-w-[1300px] px-[10px] sm:px-[38px] mx-auto pt-10 sm:pt-[52px]">
         {/* Navbar container--------------------------------------------------------------------------------------------------------------------------------------------- */}
         <section className=" flex justify-between items-center relative ">
           <Navbar
@@ -153,41 +161,23 @@ const Inicio = () => {
         </section>
 
         {/* Title container--------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <section className="">
+        <section>
           {/* Container de la notificacion de correo copiado */}
-          <div className="text-[15px]">
-            <ToastContainer />
-          </div>
+          <ToastContainer />
           {/* Title desktop*/}
-          <div className=" sm:flex hidden roboto-500  lg:max-w-[1000px] max-w-[500px] text-[27px] sm:text-[35px] lg:text-[43px] mt-8 sm:mt-[60px] lg:leading-[60px] sm:leading-[50px] leading-[40px]">
+          <div className="text-[30px] roboto-500 mt-6">
             {language ? (
               <div>
-                Hola soy Carlos Baso un Ing. de Software. Bienvenido a mi
-                portafolio.
+                Hola soy Carlos Baso un Ing. de Software. <br />
+                Bienvenido a mi portafolio
               </div>
             ) : (
               <div>
-                Hello I&apos;m Carlos Baso a Software Engineer. Welcome to my
-                portfolio.
+                Hello I&apos;m Carlos Baso a Software Engineer. <br />
+                Welcome to my portfolio.
               </div>
             )}
           </div>
-          {/* Title mobile */}
-          {isOpen ? null : (
-            <div className="sm:hidden flex roboto-500 lg:max-w-[1000px] max-w-[600px] text-[27px] sm:text-[43px] lg:text-[43px] mt-8 sm:mt-[60px] lg:leading-[60px] sm:leading-[50px] leading-[40px]">
-              {language ? (
-                <div>
-                  Hola soy Carlos Baso un Ing. de Software. Bienvenido a mi
-                  portafolio.
-                </div>
-              ) : (
-                <div>
-                  Hello I&apos;m Carlos Baso a Software Engineer. Welcome to my
-                  portfolio.
-                </div>
-              )}
-            </div>
-          )}
         </section>
         {/* Menu mobile */}
         <Menu_mobile
@@ -200,34 +190,100 @@ const Inicio = () => {
           setIsOpen={setIsOpen}
         />
 
-        {/* Tipos de trabajos--------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <section>
-          <div className=" hidden md:flex mt-10 sm:mt-[50px] gap-4 text-[17px] sm:text-[15px] sm:justify-start justify-center text-[#808080]">
-            <div>JavaScript</div>
-            <div>/</div>
-            <div>React JS</div>
-            <div>/</div>
-            <div>Next JS</div>
-            <div>/</div>
-            <div>Tailwind CSS</div>
-            <div>/</div>
-            <div>Astro</div>
-            <div>/</div>
-            <div>Git</div>
+        <div className="mt-6 py-4 pb-4 border-t border-b">
+          <div className="text-[25px] text-black roboto-500">
+            {/* Titulo */}
+            {language ? <div>Conocimientos</div> : <div>Skills</div>}
+            <div className=" flex gap-3 mt-2  overflow-x-auto pb-3">
+              <Badge name={"JavaScript"} />
+              <Badge name={"React"} />
+              <Badge name={"Next JS"} />
+              <Badge name={"Tailwind CSS"} />
+              <Badge name={"Astro"} />
+              <Badge name={"Firebase"} />
+              <Badge name={"Git"} />
+              <Badge name={"Node JS"} />
+              <Badge name={"React Native"} />
+              <Badge name={"HTML 5"} />
+              <Badge name={"CSS"} />
+              <Badge name={"Linux	"} />
+            </div>
           </div>
+        </div>
+
+        {/* Partners--------------------------------------------------------------------------------------------------------------------------------------------- */}
+        <section className="mt-6 py-4 pb-9 border-t border-b">
+          <div className="text-[25px] text-black">
+            {/* Titulo */}
+            <div className="  roboto-500">
+              {language ? <div>Experiencia</div> : <div>Experience</div>}
+            </div>
+
+            <div className="text-[15px] text-[#808080]">
+              {language ? (
+                <div>
+                  Algunas de las empresas con las que he podido trabajar.
+                </div>
+              ) : (
+                <div>
+                  Some of the companies I have been able to work with, always
+                  committed to providing top-level results.
+                </div>
+              )}
+            </div>
+          </div>
+          <Slider
+            width="300px"
+            duration={40}
+            pauseOnHover={false}
+            blurBorders={true}
+            blurBoderColor={"#fff"}
+          >
+            <Slider.Slide>
+              <div className=" bg-[#f9f9f9] w-[90%] h-[67%] flex mx-auto">
+                <div className="hks aspect-square w-[200px] saturate-0 mx-auto"></div>
+              </div>
+            </Slider.Slide>
+            <Slider.Slide>
+              <div className=" bg-[#f9f9f9] w-[90%] h-[67%] flex mx-auto">
+                <div className="firma aspect-square w-[200px] saturate-0 mx-auto"></div>
+              </div>
+            </Slider.Slide>
+            <Slider.Slide>
+              <div className=" bg-[#f9f9f9] w-[90%] h-[67%] flex mx-auto">
+                <div className="escritorios aspect-square w-[70px] saturate-0 mx-auto"></div>
+              </div>
+            </Slider.Slide>
+            <Slider.Slide>
+              <div className=" bg-[#f9f9f9] w-[90%] h-[67%] flex mx-auto">
+                <div className="metas aspect-square w-[80px] saturate-0 mx-auto"></div>
+              </div>
+            </Slider.Slide>
+          </Slider>
         </section>
 
         {/* Projects container--------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <section className=" ">
+        <section className="mt-6 py-4 pb-9 border-t border-b">
           {/* Projects */}
+          <div className="text-[25px] text-black">
+            {/* Titulo */}
+            <div className="  roboto-500">
+              {" "}
+              {language ? <div>Proyectos</div> : <div>Projects</div>}
+            </div>
 
-          <div
-            className={
-              isOpen
-                ? `grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-9 md:mt-[65px] sm:mt-[135px] mt-[20px] transition-all duration-500`
-                : `grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-9 md:mt-[35px] sm:mt-[25px] mt-[20px] transition-all duration-500`
-            }
-          >
+            <div className="text-[15px] text-[#808080]">
+              {language ? (
+                <div>Mis trabajos mas recientes.</div>
+              ) : (
+                <div>
+                  Some of the companies I have been able to work with, always
+                  committed to providing top-level results.
+                </div>
+              )}
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-9 mt-7">
             {filtered
               .map((item) => (
                 <div
@@ -255,66 +311,24 @@ const Inicio = () => {
                       </div>
                     </div>
                   </div>
-                  {/* Tag mobile */}
-                  <div className=" sm: sm:hidden bg-[#101010] text-white text-center py-2 border-[1px] border-white">
-                    <div className="text-[18px] roboto-light">{item.title}</div>
-                    <div className="text-[13px] text-[#b0b0b0]">
-                      {item.category}
+                  <div className=" grid grid-cols-2 text-sm">
+                    <div className="w-full bg-[#101010] text-white flex py-[12px] relative justify-center cursor-pointer border">
+                      <div className=" absolute left-5">L</div>
+                      {language ? (
+                        <div className="ml-1">Ver demo</div>
+                      ) : (
+                        <div className="ml-1">View demo</div>
+                      )}
+                    </div>
+                    <div className="w-full bg-[#101010] text-white flex  py-[12px] relative justify-center cursor-pointer border">
+                      <div className=" absolute left-5">L</div>
+                      <div className="ml-1">Github</div>
                     </div>
                   </div>
                 </div>
               ))
               .reverse()}
           </div>
-        </section>
-        {/* Partners--------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <section className="mt-12 md:block hidden text-center">
-          <div className="flex flex-col -mb-4   ">
-            <div className=" w-[250px] mx-auto  h-[1px] bg-[#e0e0e0] mb-8 mt-0"></div>
-
-            <h1 className="text-[35px]  text-black roboto-500 ">
-              {/* Titulo */}
-              {language ? <div>Experiencia</div> : <div>Experience</div>}
-            </h1>
-            <h2 className="max-w-[500px] mx-auto mt-2 text-[#808080] mb-10 text-[15px]">
-              {/* Subtitulo */}
-              {language ? (
-                <div>
-                  Algunas de las empresas con las que he podido trabajar,
-                  siempre comprometido a proporcionar resultados del más alto
-                  nivel.
-                </div>
-              ) : (
-                <div>
-                  Some of the companies I have been able to work with, always
-                  committed to providing top-level results.
-                </div>
-              )}
-            </h2>
-          </div>
-          <Slider
-            width="300px"
-            duration={40}
-            pauseOnHover={false}
-            blurBorders={true}
-            blurBoderColor={"#fff"}
-          >
-            <Slider.Slide>
-              <div className=" bg-[#f9f9f9] w-[90%] h-[67%] flex mx-auto">
-                <div className="hks aspect-square w-[200px] saturate-0 mx-auto"></div>
-              </div>
-            </Slider.Slide>
-            <Slider.Slide>
-              <div className=" bg-[#f9f9f9] w-[90%] h-[67%] flex mx-auto">
-                <div className="firma aspect-square w-[200px] saturate-0 mx-auto"></div>
-              </div>
-            </Slider.Slide>
-            <Slider.Slide>
-              <div className=" bg-[#f9f9f9] w-[90%] h-[67%] flex mx-auto">
-                <div className="escritorios aspect-square w-[60px] saturate-0 mx-auto"></div>
-              </div>
-            </Slider.Slide>
-          </Slider>
         </section>
       </main>
 
