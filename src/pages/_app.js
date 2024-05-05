@@ -1,8 +1,9 @@
 import "@/styles/globals.css";
+import "@fontsource/roboto";
 
 const App = ({ Component, pageProps, router }) => {
   return (
-    <div className="roboto-400">
+    <div style={{ fontFamily: "Roboto, sans-serif" }}>
       <Component key={router.pathname} {...pageProps} />
     </div>
   );

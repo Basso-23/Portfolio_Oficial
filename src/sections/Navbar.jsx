@@ -2,11 +2,11 @@ import Clipboard from "@/assets/Icons/Clipboard";
 import Send from "@/assets/Icons/Send";
 import Check from "@/assets/Icons/Check";
 
-const Navbar = ({ language, setLanguage, notify, refresh, resume }) => {
+const Navbar = () => {
   return (
-    <>
+    <section className=" flex justify-between items-center relative ">
       {/* Logo */}
-      <div className=" pointer-events-none roboto-bold text-[30px] border-[3.5px]  border-black w-[50px] h-[48px]  roboto-500 flex items-center text-center justify-center">
+      <div className=" pointer-events-none roboto-bold text-[22px] border-[3.5px]  border-black w-[45px] h-[43px]  roboto-500 flex items-center text-center justify-center">
         P
       </div>
       {/* Navbar----------------------------------------------- */}
@@ -14,21 +14,14 @@ const Navbar = ({ language, setLanguage, notify, refresh, resume }) => {
         {/* correo----------------------------------------------- */}
         <div>
           <div className=" cursor-default focus w-full h-full relative">
-            {language ? <div>Correo electrónico</div> : <div>Email</div>}
+            <div>Correo electrónico</div>
           </div>
           <div className="focus-content2 absolute sm:flex hidden justify-center flex-col tracking-wide w-[210px] roboto-light">
             <div className="h-[10px] w-full"></div>
 
-            <div
-              onClick={notify}
-              className=" bg-[#101010] normal-case text-[12px] px-6 py-4 border-b-[1px] border-[#333333] flex gap-2 cursor-pointer "
-            >
+            <div className=" bg-[#101010] normal-case text-[12px] px-6 py-4 border-b-[1px] border-[#333333] flex gap-2 cursor-pointer ">
               <div className="relative flex">
-                {language ? (
-                  <div>Copiar al portapapeles</div>
-                ) : (
-                  <div>Copy to clipboard</div>
-                )}
+                <div>Copiar al portapapeles</div>
                 <div className="  absolute -right-6 ">
                   <Clipboard />
                 </div>
@@ -39,7 +32,7 @@ const Navbar = ({ language, setLanguage, notify, refresh, resume }) => {
               className=" bg-[#101010] normal-case text-[12px] px-6 py-4 border-b-[1px] border-[#333333] flex gap-2 cursor-pointer "
             >
               <div className="relative flex">
-                {language ? <div>Enviar correo</div> : <div>Send email</div>}
+                <div>Enviar correo</div>
                 <div className="  absolute -right-6 ">
                   <Send />
                 </div>{" "}
@@ -64,49 +57,37 @@ const Navbar = ({ language, setLanguage, notify, refresh, resume }) => {
           Linkedin
         </a>
         {/* Currículum----------------------------------------------- */}
-        <a target="_blank" href={resume} className=" cursor-pointer">
-          {language ? <div>Currículum</div> : <div>Resume</div>}
+        <a target="_blank" href={"drive.com"} className=" cursor-pointer">
+          <div>Currículum</div>
         </a>
         {/* Idioma----------------------------------------------- */}
         <div>
           <div className="cursor-default focus w-full h-full relative">
-            {language ? <div>Idioma</div> : <div>Language</div>}
+            <div>Idioma</div>
           </div>
           <div className="focus-content3 absolute sm:flex hidden justify-center flex-col tracking-wide w-[210px] roboto-light">
             <div className="h-[10px] w-full"></div>
-            <div
-              onClick={() => {
-                setLanguage(true);
-                refresh();
-              }}
-              className=" bg-[#101010] normal-case text-[12px] px-6 py-4 border-b-[1px] border-[#333333] flex gap-2 cursor-pointer "
-            >
+            <div className=" bg-[#101010] normal-case text-[12px] px-6 py-4 border-b-[1px] border-[#333333] flex gap-2 cursor-pointer ">
               <div className="relative flex">
                 Español
                 <div className=" -mt-[4px] absolute -right-6 ">
-                  {language ? <Check /> : null}
-                </div>{" "}
+                  {true ? <Check /> : null}
+                </div>
               </div>
             </div>
 
-            <div
-              onClick={() => {
-                setLanguage(false);
-                refresh();
-              }}
-              className=" bg-[#101010] normal-case text-[12px] px-6 py-4 border-b-[1px] border-[#333333] flex gap-2 cursor-pointer "
-            >
+            <div className=" bg-[#101010] normal-case text-[12px] px-6 py-4 border-b-[1px] border-[#333333] flex gap-2 cursor-pointer ">
               <div className="relative flex">
                 English
                 <div className=" -mt-[4px] absolute -right-8 ">
-                  {language ? null : <Check />}
-                </div>{" "}
+                  {true ? null : <Check />}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

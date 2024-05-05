@@ -220,3 +220,19 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.pageSize {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+@media (min-width: 540px) {
+  .pageSize {
+    max-width: 1300px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
